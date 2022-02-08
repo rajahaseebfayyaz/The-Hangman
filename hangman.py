@@ -18,12 +18,24 @@ def get_word():
       while not guessed and tries > 0:
           guess = input("Please guess a letter or word: ").upper()
           if len(guess) == 1 and guess.isalpha():
+              if guess in guessed_letters:
+                  print("You already guessed the letter" , guess)
+                  elif guess not in word:
+                      print(guess ,"is not in the word.")
+                      tries -= 1
+                      guessed_letters.append guess
+                      else:
+                          print("Good job,", guess, "is i the word!")
+                          guessed_letters.append(guess)
+                          word_as_list = list(word_completion)
 
-              elif len(guess) == len(word) and guess.isalpha():
+                      elif len(guess) == len(word) and guess.isalpha():
 
                   else:
                       print("Not a valid guess.")
                       print(display_hangman(tries))
                       print(word_completion)
                       print("/n")
+
+                      
  
