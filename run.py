@@ -1,145 +1,15 @@
-import random
+def main():
+    print("WELCOME TO HANGMAN")
+    word = get_word()
+    play(word)
+
+if __name__ == "__main__":
+    main()
+
+    import random
 from words import word_list, stages
 
 # The idea and the bit of code for this game was taken from emmalawlor also from youtube tutorials # noqa
-
-stages = ["""
-    -----
-    |   |
-    |   0
-    | /-+-\
-    |   |
-    |   |
-    |  | |
-    |  | |
-    |
-    --------
-    """,
-
-
-    """
-    -----
-    |   |
-    |   0
-    | /-+-\
-    |   |
-    |   |
-    |  | |
-    |  |
-    |
-    --------
-    """,
-    """
-    -----
-    |   |
-    |   0
-    | /-+-\
-    |   |
-    |   |
-    |  |
-    |  |
-    |
-    --------
-    """,
-    """
-    -----
-    |   |
-    |   0
-    | /-+-\
-    |   |
-    |   |
-    |  |
-    |
-    |
-    --------
-    """,
-    """
-    -----
-    |   |
-    |   0
-    | /-+-\
-    |   |
-    |   |
-    |
-    |
-    |
-    --------
-    """,
-    """
-    -----
-    |   |
-    |   0
-    | /-+-\
-    |   |
-    |
-    |
-    |
-    |
-    --------
-    """,
-    """
-    -----
-    |   |
-    |   0
-    | /-+-\
-    |
-    |
-    |
-    |
-    |
-    --------
-    """,
-    """
-    -----
-    |   |
-    |   0
-    | /-+-
-    |
-    |
-    |
-    |
-    |
-    --------
-    """,
-    """
-    -----
-    |   |
-    |   0
-    |  -+-
-    |
-    |
-    |
-    |
-    |
-    --------
-    """,
-    """
-    -----
-    |   |
-    |   0
-    |
-    |
-    |
-    |
-    |
-    |
-    --------
-    """,
-    """
-    -----
-    |   |
-    |
-    |
-    |
-    |
-    |
-    |
-    |
-    --------
-    """,
-    ]
-
-
 
 class Hangman:
     """
@@ -152,12 +22,14 @@ class Hangman:
     """
 
 def get_word():
+    print("finding the word... ")
     word = random.choice(word_list)
     return word.upper()
 
 
 def play(word):
     """This function initializes the word completion"""
+    print("YOU ARE IN PLAY")
     word_completion = "_" * len(word)
     guessed = False
     guessed_letters = []
@@ -215,8 +87,3 @@ def play(word):
 def display_hangman(tries):
 
     return stages[tries]
-
-
-def main():
-    word = get_word()
-    play(word)

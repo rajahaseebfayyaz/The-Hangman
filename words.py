@@ -241,3 +241,67 @@ word_list = ["aback", "abaft", "abandoned", "abashed", "aberrant", "abhorrent", 
     "x-ray", "yak", "yam", "yard", "yarn", "yawn", "year", "yell", "yellow", "yielding", "yoke", "young",
     "youthful", "yummy", "zany", "zealous", "zebra", "zephyr", "zesty", "zinc", "zip", "zipper", "zippy",
     "zonked", "zoo", "zoom"]
+
+
+    def display_hangman(tries):
+   stages = [  # final Stage: totally underwater, NO AIR
+       Fore.WHITE + " --------------------" +
+       Fore.BLUE + "--------------------" +
+       Fore.BLUE + "--------------------" +
+       Fore.BLUE + "--------------------" +
+       Fore.BLUE + "--------------------" +
+       Fore.BLUE + "--------------------" +
+       Fore.BLUE + "--------------------" +
+       Fore.BLUE + "--------------------",
+ 
+       # guy is covered in water, BUT THERE IS AIR AT THE TOP
+       Fore.WHITE + " --------------------" +
+       Fore.WHITE + "|                  |" +
+       Fore.BLUE + "--------------------" +
+       Fore.BLUE + "--------------------" +
+       Fore.BLUE + "--------------------" +
+       Fore.BLUE + "--------------------" +
+       Fore.BLUE + "--------------------" +
+       Fore.BLUE + "--------------------",
+       # guy is shoulder deep in water
+       Fore.WHITE + " --------------------" +
+       Fore.WHITE + "|                  |" +
+       Fore.WHITE + "|      O           |" +
+       Fore.BLUE + "--------------------" +
+       Fore.BLUE + "--------------------" +
+       Fore.BLUE + "--------------------" +
+       Fore.BLUE + "--------------------",
+       # guy is waste deep in water
+       Fore.WHITE + " --------------------" +
+       Fore.WHITE + "|                  |" +
+       Fore.WHITE + "|      O           |" +
+       Fore.WHITE + "|     \\|/         |" +
+       Fore.BLUE + "--------------------" +
+          Fore.BLUE + "--------------------" +
+       Fore.BLUE + "--------------------",
+       # guy is knee deep in water
+       Fore.WHITE + " --------------------" +
+       Fore.WHITE + "|                 |" +
+       Fore.WHITE + "|      O           |" +
+       Fore.WHITE + "|     \\|/         |" +
+       Fore.WHITE + "|      |           |" +
+       Fore.BLUE + "--------------------" +
+       Fore.BLUE + "--------------------",
+       # guy is standing on water
+       Fore.WHITE + " --------------------" +
+       Fore.WHITE + "|                  |" +
+       Fore.WHITE + "|      O           |" +
+       Fore.WHITE + "|     \\|/         |" +
+       Fore.WHITE + "|      |           |" +
+       Fore.WHITE + "|     / \\         |" +
+       Fore.BLUE + "--------------------",
+       # initial Guy is on dry land
+       Fore.WHITE + " --------------------" +
+       Fore.WHITE + "|                  |" +
+       Fore.WHITE + "|      O           |" +
+       Fore.WHITE + "|     \\|/         |" +
+       Fore.WHITE + "|      |           |" +
+       Fore.WHITE + "|     / \\         |" +
+       Fore.WHITE + "--------------------"
+   ]
+   return stages[tries]
