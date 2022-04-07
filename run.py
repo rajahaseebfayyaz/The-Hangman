@@ -8,6 +8,7 @@ def get_word():
 
 
 def play(word):
+    """This function initializes the word completion"""
     word_completion = "_" * len(word)
     guessed = False
     guessed_letters = []
