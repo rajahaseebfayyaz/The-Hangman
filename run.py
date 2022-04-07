@@ -1,6 +1,155 @@
 import random
 from words import word_list, stages
 
+# The idea and the bit of code for this game was taken from emmalawlor also from youtube tutorials # noqa
+
+stages = ["""
+    -----
+    |   |
+    |   0
+    | /-+-\
+    |   |
+    |   |
+    |  | |
+    |  | |
+    |
+    --------
+    """,
+
+
+    """
+    -----
+    |   |
+    |   0
+    | /-+-\
+    |   |
+    |   |
+    |  | |
+    |  |
+    |
+    --------
+    """,
+    """
+    -----
+    |   |
+    |   0
+    | /-+-\
+    |   |
+    |   |
+    |  |
+    |  |
+    |
+    --------
+    """,
+    """
+    -----
+    |   |
+    |   0
+    | /-+-\
+    |   |
+    |   |
+    |  |
+    |
+    |
+    --------
+    """,
+    """
+    -----
+    |   |
+    |   0
+    | /-+-\
+    |   |
+    |   |
+    |
+    |
+    |
+    --------
+    """,
+    """
+    -----
+    |   |
+    |   0
+    | /-+-\
+    |   |
+    |
+    |
+    |
+    |
+    --------
+    """,
+    """
+    -----
+    |   |
+    |   0
+    | /-+-\
+    |
+    |
+    |
+    |
+    |
+    --------
+    """,
+    """
+    -----
+    |   |
+    |   0
+    | /-+-
+    |
+    |
+    |
+    |
+    |
+    --------
+    """,
+    """
+    -----
+    |   |
+    |   0
+    |  -+-
+    |
+    |
+    |
+    |
+    |
+    --------
+    """,
+    """
+    -----
+    |   |
+    |   0
+    |
+    |
+    |
+    |
+    |
+    |
+    --------
+    """,
+    """
+    -----
+    |   |
+    |
+    |
+    |
+    |
+    |
+    |
+    |
+    --------
+    """,
+    ]
+
+
+
+class Hangman:
+    """
+    This proejct is an example of the original hangman game
+    all the features required for gameplay are included
+    Displays the hangman to the user
+    Runs the game by asking the user for input
+    Evaluates user input
+    Determines result & checks if user wants to play again
+    """
 
 def get_word():
     word = random.choice(word_list)
