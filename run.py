@@ -36,13 +36,13 @@ class Hangman:
 
     def play_hangman(self):
         """
-        While user has lost less than 7 lives,
+        While user has lost less than 5 lives,
         requests a letter from user & validates input to ensure it is a letter
         checks if the letter is in the word and if it has been guessed already.
         Gives user appropraite feedback.
         Breaks loop when user has correctly guessed all letters
         """
-        while self.stage < 6:
+        while self.stage < 5:
             self.display_hangman()
             guess = input('Choose a letter: ').lower().strip()  # noqa
             print('\n')
