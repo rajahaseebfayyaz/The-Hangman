@@ -1,8 +1,7 @@
 import random
-from words import words
+from words import word_list, stages
 
 # The idea of this game and bit of code has been taken from youtube tutorials and from emmalawlor hangman game  # noqa
-
 
 
 class Hangman:
@@ -15,7 +14,7 @@ class Hangman:
     Determines result & checks if user wants to play again
     """
     def __init__(self):
-        self.word = random.choice(words)
+        self.word = random.choice(word_list)
         self.stage = 0
         self.guessed_letters = []
         self.guessed_words = []
@@ -30,9 +29,9 @@ class Hangman:
         Displays the hangman image relevant to the amount of lives remaining
         Dsiplays the random word with letters represented by dashes
         """
-        print(+ HANGMAN_PICS[self.stage])
+        print(stages[self.stage])
         print('\n')
-        print(self.progress + Style.RESET_ALL)
+        print(self.progress)
         print('\n')
 
     def play_hangman(self):
@@ -45,7 +44,7 @@ class Hangman:
         """
         while self.stage < 6:
             self.display_hangman()
-            guess = input(f'Choose a letter: {Style.RESET_ALL}').lower().strip()  # noqa
+            guess = input('Choose a letter: ').lower().strip()  # noqa
             print('\n')
             if guess.isalpha() and len(guess) == 1:
                 if guess not in self.word:
@@ -53,7 +52,7 @@ class Hangman:
                         print(f'You already guessed {guess}, try again')
                         print('\n')
                     else:
-                        print(f'{guess} is not in the word, try again{Style.RESET_ALL}')  # noqa
+                        print(f'{guess} is not in the word, try again')  # noqa
                         print('\n')
                         self.stage += 1
                         self.guessed_letters.append(guess)
@@ -62,7 +61,7 @@ class Hangman:
                         print(f'You already guessed {guess}, try again')
                         print('\n')
                     else:
-                        print(f'{guess} is in the word!{Style.RESET_ALL}')  # noqa
+                        print(f'{guess} is in the word!') # noqa
                         print('\n')
                         self.guessed_letters.append(guess)
                         # code for replacing dashes with letters adapted from  # noqa
@@ -73,13 +72,13 @@ class Hangman:
                             word_as_list[index] = guess
                             self.progress = "".join(word_as_list)
                         if "-" not in self.progress:
-                            print(f'Congrats! You correctly guessed the answer: {self.word}{Style.RESET_ALL}')  # noqa
+                            print(f'Congrats! You correctly guessed the answer: {self.word}') # noqa
                             print('\n')
                             self.games_won += 1
                             break
 
             elif guess.isalpha() and guess == self.word:
-                print(f'Congrats! You correctly guessed the answer: {self.word}{Style.RESET_ALL}')  # noqa
+                print(f'Congrats! You correctly guessed the answer: {self.word}') # noqa
                 print('\n')
                 self.games_won += 1
                 break
@@ -89,7 +88,7 @@ class Hangman:
                 print('\n')
 
             elif guess.isalpha() and guess not in self.word and guess not in self.guessed_words:  # noqa
-                print(f'{guess} is not the word, try again{Style.RESET_ALL}')  # noqa
+                print(f'{guess} is not the word, try again') # noqa
                 print('\n')
                 self.stage += 1
                 self.guessed_words.append(guess)
@@ -97,9 +96,9 @@ class Hangman:
             else:
                 print('Invalid input \n')
         if self.stage >= 6:
-            print(+ HANGMAN_PICS[self.stage])
+            print(stages[self.stage])
             print('\n')
-            print(f'Game Over! The word was {self.word}{Style.RESET_ALL}')  # noqa
+            print(f'Game Over! The word was {self.word}') # noqa
             print('\n')
         self.play_again()
 
@@ -114,7 +113,7 @@ class Hangman:
             self.stage = 0
             self.guessed_letters = []
             self.guessed_words = []
-            self.word = random.choice(words)
+            self.word = random.choice(word_list)
             self.progress = '-' * len(self.word)
             self.games_played += 1
             self.play_hangman()
@@ -135,5 +134,5 @@ def main():
     game.play_hangman()
 
 
-print(f"Lets play Hangman!{Style.RESET_ALL}")
+print("Lets play Hangman!")
 main()
