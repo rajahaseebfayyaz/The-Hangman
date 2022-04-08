@@ -1,6 +1,5 @@
 import random
 from words import words
-from colorama import Fore, Style
 
 # The idea of this game and bit of code has been taken from youtube tutorials and from emmalawlor hangman game  # noqa
 
