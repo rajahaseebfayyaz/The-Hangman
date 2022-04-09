@@ -1,14 +1,14 @@
 import random
 from words import word_list, stages
 
-# The idea of this game and bit of code has been taken from youtube tutorials and from emmalawlor hangman game  # noqa
+# The idea of this game and bit of idea about code has been taken from youtube tutorials and from emmalawlor hangman game  # noqa
 
 
-class Hangman:
+class WaterTank:
     """
-    Creates an instance of the hangman game
+    Creates an instance of the WaterTank game
     Initializes all attributes required for gameplay
-    Displays the hangman to the user
+    Displays the WaterTank to the user
     Runs the game by asking the user for input
     Evaluates user input
     Determines result & checks if user wants to play again
@@ -24,9 +24,9 @@ class Hangman:
         self.games_played = 0
         self.games_won = 0
 
-    def display_hangman(self):
+    def display_tank_level(self):
         """
-        Displays the hangman image relevant to the amount of lives remaining
+        Displays the Water tank image relevant to the amount of lives remaining
         Dsiplays the random word with letters represented by dashes
         """
         print(stages[self.stage])
@@ -46,16 +46,16 @@ class Hangman:
             print(i, ' ')
         print('\n')
 
-    def play_hangman(self):
+    def play_water_tank(self):
         """
         While user has lost less than 5 lives,
         requests a letter from user & validates input to ensure it is a letter
         checks if the letter is in the word and if it has been guessed already.
-        Gives user appropraite feedback.
+        Gives user appropriate feedback.
         Breaks loop when user has correctly guessed all letters
         """
         while self.stage < 5:
-            self.display_hangman()
+            self.display_tank_level()
             guess = input('Choose a letter: ').lower().strip()  # noqa
             print('\n')
             if guess.isalpha() and len(guess) == 1:
@@ -125,7 +125,7 @@ class Hangman:
             self.word = random.choice(word_list)
             self.progress = '-' * len(self.word)
             self.games_played += 1
-            self.play_hangman()
+            self.play_water_tank()()
         elif play == 'N':
             self.games_played += 1
             print('Thanks for playing! \n')
@@ -137,11 +137,11 @@ class Hangman:
 
 def main():
     """
-    Run hangman game functions
+    Run water tank game functions
     """
-    game = Hangman()
-    game.play_hangman()
+    game = WaterTank()()
+    game.play_water_tank()
 
 
-print("Lets play Hangman!")
+print("Lets play WaterTank!")
 main()
