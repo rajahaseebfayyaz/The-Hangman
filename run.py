@@ -55,6 +55,7 @@ class WaterTank:
         Displays the Water tank image relevant to the amount of lives remaining
         Dsiplays the random word with letters represented by dashes
         """
+        self.display_guesses()
         print(stages[self.stage])
         print('\n')
         print(self.progress)
@@ -93,21 +94,29 @@ class WaterTank:
         Gives user appropriate feedback.
         Breaks loop when user has correctly guessed all letters
         """
+        # loop through stages/tries
         while self.stage < 5:
             self.display_tank_level()
             guess = input('Choose a letter: ').lower().strip()  # noqa
             print('\n')
+            # check that input is a single letter
             if guess.isalpha() and len(guess) == 1:
+                # check if guess is a part of the word 
                 if guess not in self.word:
+                    # comment here for next line of code
                     if guess in self.guessed_letters:
                         self.display_sorry()
+                        # comment here for next line of code
                     else:
                         self.stage += 1
                         self.guessed_letters.append(guess)
                         self.display_sorry()
+                        # comment here for next line of code
                 elif guess.isalpha() and guess in self.word:
+                    # comment here for next line of code
                     if guess in self.guessed_letters:
                         self.display_sorry()
+                        # comment here for next line of code
                     else:
                         print(f'{guess} is in the word!') # noqa
                         print('\n')
@@ -116,9 +125,11 @@ class WaterTank:
                         # https://github.com/kiteco/python-youtube-code/blob/master/build-hangman-in-python/hangman.py
                         word_as_list = list(self.progress)
                         indices = [i for i, letter in enumerate(self.word) if letter == guess]  # noqa
+                        # comment here for what loop does
                         for index in indices:
                             word_as_list[index] = guess
                             self.progress = "".join(word_as_list)
+                            # comment here for next line of code
                         if "-" not in self.progress:
                             print(f'Congrats! You correctly guessed the answer: {self.word}') # noqa
                             print('\n')
@@ -143,7 +154,7 @@ class WaterTank:
                 print('\n')
             else:
                 print('Invalid input \n')
-        if self.stage >= 6:
+        if self.stage >= 5:
             print(stages[self.stage])
             print('\n')
             print(f'Game Over! The word was {self.word}') # noqa
