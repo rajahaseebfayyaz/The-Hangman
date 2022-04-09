@@ -34,8 +34,16 @@ class Hangman:
         print(self.progress)
         print('\n')
 
-    def guess_already_made(self, guess):
-        print(f'You already guessed {guess}, try again')
+    def display_sorry(self):
+        print('Sorry,try again')
+        print('\n')
+
+    def display_guesses(self, guess):
+        print(f'the letters you have guessed are: ')
+
+        # printing the guesses
+        for i in self.guessed_letters:
+            print(i, ' ')
         print('\n')
 
     def play_hangman(self):
@@ -53,14 +61,14 @@ class Hangman:
             if guess.isalpha() and len(guess) == 1:
                 if guess not in self.word:
                     if guess in self.guessed_letters:
-                        self.guess_already_made(guess)
+                        self.display_sorry()
                     else:
-                        self.guess_already_made(guess)
                         self.stage += 1
                         self.guessed_letters.append(guess)
+                        self.display_sorry()
                 elif guess.isalpha() and guess in self.word:
                     if guess in self.guessed_letters:
-                        self.guess_already_made(guess)
+                        self.display_sorry()
                     else:
                         print(f'{guess} is in the word!') # noqa
                         print('\n')
