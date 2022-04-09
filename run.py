@@ -39,9 +39,6 @@ class WaterTank:
             print('Invalid choice \n')
             self.need_rules()
 
-        
-
-
     def __init__(self):
         self.word = random.choice(word_list)
         self.stage = 0
@@ -154,10 +151,11 @@ class WaterTank:
             self.word = random.choice(word_list)
             self.progress = '-' * len(self.word)
             self.games_played += 1
-            self.play_water_tank()()
+            self.play_water_tank()
         elif play == 'N':
             self.games_played += 1
             print('Thanks for playing! \n')
+            print(goodbye_msg)
             print(f'You won {self.games_won} out of {self.games_played} games')
         else:
             print('Invalid choice \n')
