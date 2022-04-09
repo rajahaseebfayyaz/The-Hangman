@@ -1,5 +1,5 @@
 import random
-from words import word_list, stages
+from words import word_list, stages, welcome_msg, goodbye_msg, rules
 
 # The idea of this game and bit of idea about code has been taken from youtube tutorials and from emmalawlor hangman game  # noqa
 
@@ -13,6 +13,35 @@ class WaterTank:
     Evaluates user input
     Determines result & checks if user wants to play again
     """
+    def welcome(self):
+        """
+        Display welcome message to user
+        """
+        print(welcome_msg)
+
+    def rules(self):
+        """
+        Print rules of game
+        """
+        print(rules)
+
+    def need_rules(self):
+        """
+        Asks user if they want rules by entering Y or N
+        """
+        play = input('Do you need rules? (Y/N').strip().upper()  # noqa
+        print('\n')
+        if play == 'Y':
+            self.rules()
+        elif play == 'N':
+            return
+        else:
+            print('Invalid choice \n')
+            self.need_rules()
+
+        
+
+
     def __init__(self):
         self.word = random.choice(word_list)
         self.stage = 0
@@ -139,7 +168,9 @@ def main():
     """
     Run water tank game functions
     """
-    game = WaterTank()()
+    game = WaterTank()
+    game.welcome()
+    game.need_rules()
     game.play_water_tank()
 
 
