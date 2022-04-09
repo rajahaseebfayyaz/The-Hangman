@@ -64,8 +64,21 @@ class WaterTank:
         print('Sorry,try again')
         print('\n')
 
-    def display_guesses(self, guess):
-        print(f'the letters you have guessed are: ')
+    def display_guesses(self):
+        """
+        Recap the guesses player has made and number
+        of tries left to solve the puzzle
+        """
+        # join from https://stackoverflow.com/questions/12309976/how-do-i-convert-a-list-into-a-string-with-spaces-in-python
+        print(f"GUESSES REMAINING: {5 - self.stage}")
+        if len(self.guessed_letters) > 0:
+            print(" GUESSED LETTERS:")
+            print(f"   {' '.join(self.guessed_letters)}")
+        if len(self.guessed_words) > 0:
+            print(" GUESSED WORDS:")
+            print(f"   {' '.join(self.guessed_words)}")
+        print('\n')
+        
 
         # printing the guesses
         for i in self.guessed_letters:
