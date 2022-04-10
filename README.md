@@ -12,9 +12,15 @@ Water Tank is a simple hangman type game. You can test yourself against rules se
 
 
 ## How To Play
-- OVER 5000 WORDS
+- The game is filled with Over 5000 words.
 - The computer will then pick a random choice.
-- The user has the option of viewing the rules, which tells them how to play.  
+- The user has the option of viewing the rules, which tells them how to play.
+- The screen than tells user of how many guesses he/she have remaining.
+- User chooses the alphabet to complete the guess word
+- if the alphabet is in the word the game automatically moves forward to next guess word and if not than user loses one lifeline
+- sorry try again message displays on top
+- Once user loses all lifelines and water tank fills with man drowning user will be given choice to play again or leave
+- if user chooses not to play further than user will be greeted with goodbye message also updating of the score  
 
 ## Features 
 
