@@ -244,6 +244,7 @@ word_list = ["aback", "abaft", "abandoned", "abashed", "aberrant", "abhorrent", 
     "zonked", "zoo", "zoom"]
 
 welcome_msg="""
+WELCOME TO
 
  _     _  _______  _______  _______  ______      _______  _______  __    _  ___   _ 
 | | _ | ||   _   ||       ||       ||    _ |    |       ||   _   ||  |  | ||   | | |
@@ -252,6 +253,9 @@ welcome_msg="""
 |       ||       |  |   |  |    ___||    __  |    |   |  |       ||  _    ||     |_ 
 |   _   ||   _   |  |   |  |   |___ |   |  | |    |   |  |   _   || | |   ||    _  |
 |__| |__||__| |__|  |___|  |_______||___|  |_|    |___|  |__| |__||_|  |__||___| |_|
+
+A game like hangman brought to you by Raja
+
 """
 
 rules="""
@@ -263,9 +267,27 @@ rules="""
 |    __  ||       ||   |___ |    ___||_____  |
 |   |  | ||       ||       ||   |___  _____| |
 |___|  |_||_______||_______||_______||_______|
-In this game we have 5 incorrectguesses for the game"""
+
+Water tank is easy and fun to play.
+
+Guess the word before the tank fills and you win.
+
+You can guess an entire word or a letter at at time, but play wisely,
+you only have 5 stages before you run out of air.
+
+Repeating guesses you already made will not count against your tries.
+"""
 
 goodbye_msg="""
+
+
+ _____  _     ____  _      _  __ ____    _____ ____  ____    ____  _     ____ ___  _ _  _      _____
+/__ __\/ \ /|/  _ \/ \  /|/ |/ // ___\  /    //  _ \/  __\  /  __\/ \   /  _ \\  \/// \/ \  /|/  __/
+  / \  | |_||| / \|| |\ |||   / |    \  |  __\| / \||  \/|  |  \/|| |   | / \| \  / | || |\ ||| |  _
+  | |  | | ||| |-||| | \|||   \ \___ |  | |   | \_/||    /  |  __/| |_/\| |-|| / /  | || | \||| |_//
+  \_/  \_/ \|\_/ \|\_/  \|\_|\_\\____/  \_/   \____/\_/\_\  \_/   \____/\_/ \|/_/   \_/\_/  \|\____\
+                                                                                                    
+
 
  _______  _______  _______  ______   _______  __   __  _______   
 |       ||       ||       ||      | |  _    ||  | |  ||       |  

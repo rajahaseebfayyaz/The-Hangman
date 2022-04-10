@@ -13,6 +13,17 @@ class WaterTank:
     Evaluates user input
     Determines result & checks if user wants to play again
     """
+    def __init__(self):
+        self.word = random.choice(word_list)
+        self.stage = 0
+        self.guessed_letters = []
+        self.guessed_words = []
+        # Solution for displaying the hidden word taken from this youttube
+        # With underscores replaced by dashes
+        self.progress = '-' * len(self.word)
+        self.games_played = 0
+        self.games_won = 0
+    
     def welcome(self):
         """
         Display welcome message to user
@@ -38,17 +49,6 @@ class WaterTank:
         else:
             print('Invalid choice \n')
             self.need_rules()
-
-    def __init__(self):
-        self.word = random.choice(word_list)
-        self.stage = 0
-        self.guessed_letters = []
-        self.guessed_words = []
-        # Solution for displaying the hidden word taken from this youttube
-        # With underscores replaced by dashes
-        self.progress = '-' * len(self.word)
-        self.games_played = 0
-        self.games_won = 0
 
     def display_tank_level(self):
         """
