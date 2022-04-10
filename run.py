@@ -44,7 +44,7 @@ class WaterTank:
         self.stage = 0
         self.guessed_letters = []
         self.guessed_words = []
-        # Solution for displaying the hidden word taken from this tutorial https://www.youtube.com/c/KiteHQ  # noqa
+        # Solution for displaying the hidden word taken from this youttube
         # With underscores replaced by dashes
         self.progress = '-' * len(self.word)
         self.games_played = 0
@@ -70,7 +70,7 @@ class WaterTank:
         Recap the guesses player has made and number
         of tries left to solve the puzzle
         """
-        # join from https://stackoverflow.com/questions/12309976/how-do-i-convert-a-list-into-a-string-with-spaces-in-python
+        # join from https://stackoverflow.com/questions/12309976/how-do-i-convert-a-list-into-a-string-with-spaces-in-python  # noqa
         print(f"GUESSES REMAINING: {5 - self.stage}")
         if len(self.guessed_letters) > 0:
             print(" GUESSED LETTERS:")
@@ -79,7 +79,6 @@ class WaterTank:
             print(" GUESSED WORDS:")
             print(f"   {' '.join(self.guessed_words)}")
         print('\n')
-        
 
         # printing the guesses
         for i in self.guessed_letters:
@@ -101,7 +100,7 @@ class WaterTank:
             print('\n')
             # check that input is a single letter
             if guess.isalpha() and len(guess) == 1:
-                # check if guess is a part of the word 
+                # check if guess is a part of the word
                 if guess not in self.word:
                     # comment here for next line of code
                     if guess in self.guessed_letters:
@@ -118,7 +117,7 @@ class WaterTank:
                         self.display_sorry()
                         # comment here for next line of code
                     else:
-                        print(f'{guess} is in the word!') # noqa
+                        print(f'{guess} is in the word!')
                         print('\n')
                         self.guessed_letters.append(guess)
                         # code for replacing dashes with letters adapted from  # noqa
@@ -131,13 +130,13 @@ class WaterTank:
                             self.progress = "".join(word_as_list)
                             # comment here for next line of code
                         if "-" not in self.progress:
-                            print(f'Congrats! You correctly guessed the answer: {self.word}') # noqa
+                            print(f'Congrats! You correctly guessed the answer: {self.word}')  # noqa
                             print('\n')
                             self.games_won += 1
                             break
 
             elif guess.isalpha() and guess == self.word:
-                print(f'Congrats! You correctly guessed the answer: {self.word}') # noqa
+                print(f'Congrats! You correctly guessed the answer: {self.word}')  # noqa
                 print('\n')
                 self.games_won += 1
                 break
@@ -147,7 +146,7 @@ class WaterTank:
                 print('\n')
 
             elif guess.isalpha() and guess not in self.word and guess not in self.guessed_words:  # noqa
-                print(f'{guess} is not the word, try again') # noqa
+                print(f'{guess} is not the word, try again')
                 print('\n')
                 self.stage += 1
                 self.guessed_words.append(guess)
@@ -157,7 +156,7 @@ class WaterTank:
         if self.stage >= 5:
             print(stages[self.stage])
             print('\n')
-            print(f'Game Over! The word was {self.word}') # noqa
+            print(f'Game Over! The word was {self.word}')
             print('\n')
         self.play_again()
 
