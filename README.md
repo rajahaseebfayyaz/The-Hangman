@@ -94,7 +94,7 @@ copy def functions with self and explanations docstring
 
 ## Defects 
 
-3-4
+I have manually tracked and fixed errors in github and they were mainly indentation errors such as irreregular spacing and irrelevent spaces.
 
 ## Deployments 
 ### Heroku 
@@ -133,7 +133,7 @@ The live link can be found here - https://thehangman2022.herokuapp.com/
 ### Credits 
 
 #### Media
-- I made the flow chart using this lucidchart.
+- I made the flow chart using the lucidchart.
 
 ## Acknowledgments
 - My mentor Malia, as always, helped me throught this project. She helped me push this project above and beyond. 
