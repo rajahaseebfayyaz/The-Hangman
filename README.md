@@ -19,6 +19,7 @@ Water Tank is a simple hangman type game. You can test yourself against rules se
 
 
 ## How To Play
+
 - The game is filled with Over 5000 words.
 - The computer will then pick a random choice.
 - The user has the option of viewing the rules, which tells them how to play.
@@ -33,24 +34,122 @@ Water Tank is a simple hangman type game. You can test yourself against rules se
 
 ### Implemented Features 
 
-#### Welcome Message
+#### Welcome Message:
 
-#### Rules Question
+WELCOME TO
 
-#### Play Game
+
+ _      ____  _____  _____ ____    _____  ____  _      _  __
+/ \  /|/  _ \/__ __\/  __//  __\  /__ __\/  _ \/ \  /|/ |/ /
+| |  ||| / \|  / \  |  \  |  \/|    / \  | / \|| |\ |||   / 
+| |/\||| |-||  | |  |  /_ |    /    | |  | |-||| | \|||   \ 
+\_/  \|\_/ \|  \_/  \____\\_/\_\    \_/  \_/ \|\_/  \|\_|\_\
+                                                            
+
+
+A game like hangman brought to you by Raja
+
+#### Rules Question:
+
+ ______    __   __  ___      _______  _______ 
+|    _ |  |  | |  ||   |    |       ||       |
+|   | ||  |  | |  ||   |    |    ___||  _____|
+|   |_||_ |  |_|  ||   |    |   |___ | |_____ 
+|    __  ||       ||   |___ |    ___||_____  |
+|   |  | ||       ||       ||   |___  _____| |
+|___|  |_||_______||_______||_______||_______|
+
+Water tank is easy and fun to play.
+
+Guess the word before the tank fills and you win.
+
+You can guess an entire word or a letter at at time, but play wisely,
+you only have 5 stages before you run out of air.
+
+Repeating guesses you already made will not count against your tries.
+
+#### Play Game:
+
+- When start playing gives user choice of 5 guesses
+- Each time user guesses correct alphabet game continues
+- When guessed wrong alphabets after 5 tries the game is over thus displaying the user scores
 
 #### Made user input easier by:
+
 - Case insensitivity can enter W and w etc. 
 - Leading/trailing space stripping.
 - Users don't have to type entire letters for Yes No validation, but keeping it simple.
 
-#### Recap Guessed letters and Guessed words
+#### Recap Guessed letters and Guessed words:
 
-#### Dearh by Drowning stages represented with pixelated images
+-gives insights of guessed letters and words of which user selects
 
-#### PLay again
+#### Death by Drowning stages represented with pixelated images:
+stages =
+       # initial Guy is on dry land
+       """
+       --------------------
+       |                  |
+       |      O           |
+       |     \\|/          |
+       |      |           |
+       |     / \\          |
+       --------------------""",
 
-#### Goodbye message
+       # guy is knee deep in water
+       """
+       --------------------
+       |                  |
+       |      O           |
+       |     \\|/          |
+       |      |           |
+       --------------------
+       --------------------""",
+      
+       # guy is waste deep in water
+       """
+       --------------------
+       |                  |
+       |      O           |
+       |     \\|/          |
+       --------------------
+       --------------------
+       --------------------""",
+
+       # guy is shoulder deep in water
+       """
+       --------------------
+       |                  |
+       |      O           |
+       --------------------
+       --------------------
+       --------------------
+       --------------------""",
+       
+      # guy is covered in water, BUT THERE IS AIR AT THE TOP
+       """
+       --------------------
+       |                  |
+       --------*-----------
+       --------------------
+       --------------------
+       --------------------
+       --------------------
+       --------------------""",
+
+       # final Stage: totally underwater, NO AIR
+        """
+         -------------------- 
+         --------------------
+         --------------------
+         --------------------
+         --------------------
+         --------------------
+         --------------------
+         --------------------""",
+ 
+
+#### Play again and Goodbye message:
 
 - Score tracker
 - Allows users to see how many games they have won vs the computer.
