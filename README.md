@@ -133,7 +133,7 @@ The live link can be found here - https://thehangman2022.herokuapp.com/
 ### Credits 
 
 #### Media
-- I made the flow chart using this. [Flow Chart](https://app.diagrams.net/)
+- I made the flow chart using this lucidchart.
 
 ## Acknowledgments
 - My mentor Malia, as always, helped me throught this project. She helped me push this project above and beyond. 
