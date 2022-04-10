@@ -36,6 +36,9 @@ Water Tank is a simple hangman type game. You can test yourself against rules se
 
 #### Welcome Message:
 
+<img width="516" alt="image" src="https://user-images.githubusercontent.com/87448281/162604989-14f732b4-163a-4313-bbd4-f9ad7cd0ce73.png">
+
+
 WELCOME TO
 
 
@@ -50,6 +53,9 @@ WELCOME TO
 A game like hangman brought to you by Raja
 
 #### Rules Question:
+
+<img width="539" alt="image" src="https://user-images.githubusercontent.com/87448281/162605003-9bc0fb9d-2c64-4688-8a50-fb92a1b2a8fc.png">
+
 
  ______    __   __  ___      _______  _______ 
 |    _ |  |  | |  ||   |    |       ||       |
