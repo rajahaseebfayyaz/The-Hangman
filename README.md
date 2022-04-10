@@ -268,15 +268,15 @@ copy def functions with self and explanations docstring
             if guess.isalpha() and len(guess) == 1:
                 # check if guess is a part of the word
                 if guess not in self.word:
-                    # comment here for next line of code
+                    # # check if guess is not in letter
                     if guess in self.guessed_letters:
                         self.display_sorry()
-                        # comment here for next line of code
+                         # check if guessed letter is not a part of word
                     else:
                         self.stage += 1
                         self.guessed_letters.append(guess)
                         self.display_sorry()
-                        # comment here for next line of code
+                        
                 elif guess.isalpha() and guess in self.word:
                     # comment here for next line of code
                     if guess in self.guessed_letters:
