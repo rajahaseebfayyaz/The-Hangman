@@ -102,10 +102,10 @@ class WaterTank:
             if guess.isalpha() and len(guess) == 1:
                 # check if guess is a part of the word
                 if guess not in self.word:
-                    # comment here for next line of code
+                    # check if guess is not in letter
                     if guess in self.guessed_letters:
                         self.display_sorry()
-                        # comment here for next line of code
+                        # check if guessed letter is not a part of word
                     else:
                         self.stage += 1
                         self.guessed_letters.append(guess)
@@ -124,11 +124,11 @@ class WaterTank:
                         # https://github.com/kiteco/python-youtube-code/blob/master/build-hangman-in-python/hangman.py
                         word_as_list = list(self.progress)
                         indices = [i for i, letter in enumerate(self.word) if letter == guess]  # noqa
-                        # comment here for what loop does
+                        # creates loop for words
                         for index in indices:
                             word_as_list[index] = guess
                             self.progress = "".join(word_as_list)
-                            # comment here for next line of code
+                            # check if guessed correctly game proceeds
                         if "-" not in self.progress:
                             print(f'Congrats! You correctly guessed the answer: {self.word}')  # noqa
                             print('\n')
