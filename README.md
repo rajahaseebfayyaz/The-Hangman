@@ -86,6 +86,8 @@ Repeating guesses you already made will not count against your tries.
 
 #### Death by Drowning stages represented with pixelated images:
 stages =
+       
+       
        # initial Guy is on dry land
        """
        --------------------
