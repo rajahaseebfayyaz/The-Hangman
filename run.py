@@ -23,7 +23,7 @@ class WaterTank:
         self.progress = '-' * len(self.word)
         self.games_played = 0
         self.games_won = 0
-    
+
     def welcome(self):
         """
         Display welcome message to user
@@ -110,12 +110,12 @@ class WaterTank:
                         self.stage += 1
                         self.guessed_letters.append(guess)
                         self.display_sorry()
-                        # comment here for next line of code
+
                 elif guess.isalpha() and guess in self.word:
-                    # comment here for next line of code
+
                     if guess in self.guessed_letters:
                         self.display_sorry()
-                        # comment here for next line of code
+
                     else:
                         print(f'{guess} is in the word!')
                         print('\n')
