@@ -93,23 +93,32 @@ copy def functions with self and explanations docstring
 ### Heroku 
 The site was deployed to Heroku. The steps to deploy are as follows: 
   - First, you must log into Heroku and go into the settings tab. 
-  ![deployment-one](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/deployment-one.png)
+  ![deployment-one]<img width="1437" alt="image" src="https://user-images.githubusercontent.com/87448281/162602097-f68673be-ea63-4a85-acc9-5a4f68fc342b.png">
+
   - From here, you go to the Config Vars section. 
-  ![deployment-two](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/deployment-two.png)
-  - You then enter Key: PORT and Value: 8000. If you have a google sheet installed you will need to enter the data here too. 
-  ![deployment-three](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/deployment-three.png)
+  ![deployment-two]<img width="1260" alt="image" src="https://user-images.githubusercontent.com/87448281/162602121-d853a669-624e-4d0c-bf54-70cb2cd40e91.png">
+
+  - You then enter Key: PORT and Value: 8000. 
+  ![deployment-three]<img width="1386" alt="image" src="https://user-images.githubusercontent.com/87448281/162602161-4eb9741e-1543-4bb2-a4ce-e4e37e400069.png">
+
   - You must then go to the buildpacks section. Here you add Python and Nodejs. The must be in the order of python on top, and Nodejs underneath. 
-  ![deployment-four](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/deployment-four.png)
+  ![deployment-four]<img width="1350" alt="image" src="https://user-images.githubusercontent.com/87448281/162602185-ae0627c0-5245-45e4-b394-3b868f732b3e.png">
+
   - After finishing the above you will go to the 'Deploy' tab. 
-  ![deployment-five](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/deployment-five.png)
+  ![deployment-five]<img width="1401" alt="image" src="https://user-images.githubusercontent.com/87448281/162602211-ffce11d5-9c16-4096-b700-fc2cf725035a.png">
+
   - You then connect to your Github account. 
-  ![deployment-six](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/deployment-six.png)
+  ![deployment-six]<img width="1365" alt="image" src="https://user-images.githubusercontent.com/87448281/162602226-1fe073b8-e50d-499a-921a-32c30190cb73.png">
+
   - Once you enter your repository name, your Github project will be connected to Heroku. 
-  ![deployment-seven](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/deployment-seven.png)
+  ![deployment-seven]<img width="1325" alt="image" src="https://user-images.githubusercontent.com/87448281/162602237-ed662f75-f394-4e8b-93ce-6eb29d0536b3.png">
+
   - From here you have two options to deploy. You can select the option to enable automatic deploys, so when you commit any changes will automatically deploy. 
-  ![deployment-eight](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/deployment-eight.png)
+  ![deployment-eight]<img width="1332" alt="image" src="https://user-images.githubusercontent.com/87448281/162602258-54812f06-c4d6-4eb4-ae48-ce25e3a97ee7.png">
+
   - The second option is to manually deploy, this is what I personally chose. When you click the 'Deploy' button, you will watch your files being uploaded. 
-  ![deployment-nine](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/deployment-nine.png)
+  ![deployment-nine]<img width="1330" alt="image" src="https://user-images.githubusercontent.com/87448281/162602268-8bacf046-ac6a-4c23-9c62-d6ddecba08aa.png">
+
   -   Once this is complete, a sucess message will appear with a 'View' button that will bring you to the deployed project. 
 
 
@@ -121,7 +130,7 @@ The live link can be found here - https://thehangman2022.herokuapp.com/
 
 ## Acknowledgments
 - My mentor Malia, as always, helped me throught this project. She helped me push this project above and beyond. 
-- My original code was inspired from this video. [Youtube Video](https://www.youtube.com/watch?v=-JACmC8kabo)
+- My original code was inspired from few youtube tutorials and also from emmalawlor project.
 - I learned how to use the class in python using this article. [Class atricle](https://www.scraggo.com/python-classes-guess-the-number/)
 - [Code Institute Template ](https://github.com/Code-Institute-Org/python-essentials-template)- The Template for the GUI for this project was provided by Code Institute. This allows for the Command line to be shown and used within the browser.
-- The colorama website helped to show me how to use it correctly [colorama](https://pypi.org/project/colorama/)
+- The fonts for game display taken from this website patorjk.com
