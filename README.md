@@ -106,12 +106,6 @@ The site was deployed to Heroku. The steps to deploy are as follows:
   ![deployment-nine](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/deployment-nine.png)
   -   Once this is complete, a sucess message will appear with a 'View' button that will bring you to the deployed project. 
 
-  ### Local/Gitpod
-  - Click Gitpod button or add it if you don't have it to chrome. 
-  - Once Gitpod is open, type ```pip3 install -r requirements.txt``` in the terminal. 
-  ![deployment-one-local](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/gitpod-one.png)
-  - Then type ```python3 run.py``` in the terminal. This will start the game. 
-  ![deployment-two-local](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/gitpod-two.png)
 
 The live link can be found here - https://thehangman2022.herokuapp.com/
 ### Credits 
