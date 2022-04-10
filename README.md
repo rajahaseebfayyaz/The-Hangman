@@ -1,264 +1,127 @@
-OVERVIEW
-This template was made as a guide to ensure you cover assessment criteria in your third milestone write up. It is specific to the PORTFOLIO 3: Python Essentials project. It was based off the battleship readme with a few additions to help elevate you to possible distinction status.
+# Water Tank
 
-Helpful tools
-Markdown's not all that easy so sometimes you may want to use some tools to make tables.
+## Author 
+Raja Haseeb Fayyaz
 
-Markdown Cheatsheet
-markdown table generator - used to help with documentation table formatting
-mardown table of contents generator - used to create table of contents (be weary it does have some bugs if you have dashes or trailing spaces in your headers)
-readme.so - if you don't want to learn markdown, this tool might help you
-Table of Contents
-Copy your readme to http://ecotrust-canada.github.io/markdown-toc/ to make a table of contents. This will help assessors to see the structure of your readme. Just test it out ast this tool isn't perfect. It tends to mess up with special characters like dashes.
+## Project Overview 
 
-====================================== The Sections you Fill in are below ==============================
 
-PROJECT NAME
-replace the PROJECT NAME header with your project's name
+Water Tank is a simple hangman type game. You can test yourself against rules section and you can play as many times as you want and when you are done you'll know how many games you have won, while keeping track of your score. There's even a rules section, so if you've never played before now is the perfect oppertunity!  
 
-Screenshot of logo/navigation of mobile deployed site
-Include a link to deployed project with one line explanation of project
-Author
-DEVELOPER_NAME
+### Flow Chart 
 
-Project Overview
-Include a recording of site that shows the terminal interaction. https://chrome.google.com/webstore/detail/loom-for-chrome/liecbddmkiiihnedobmlmillhodjkdmb is a very intuitive and free tool to do a web recording.
-Then you can use https://cloudconvert.com/mp4-to-gif to convert the mp4 to a gif and just paste it into the readme via git hub and it'll resovle itself.
-One or two sentences providing an overview of your project.
-Include a link to your deployed website
-Table of Contents
-Generate after readme is complete for UX and below
 
-How To Play/Use
-Paragraph or bullet points of how the user initiates the program and interfaces with it. You could have videos of each bit if you want and ditact what the user should do.
+## How To Play
+- OVER 5000 WORDS
+- The computer will then pick a random choice.
+- The user has the option of viewing the rules, which tells them how to play.  
 
-Features
-Use this section to itemize the features of your project.
+## Features 
 
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+### Implemented Features 
 
-It's easiest to break this section down into piece parts or core functionality blocks such as data upload, user input, analysis and data output; focusing on the atomic functions and data model(s) or classes you created to make the program work.
+#### Welcome Message
 
-Implemented Features
-In each subsection, write out what the feature is for and what value it adds. If there is terminal interaction or output associated with the function, include a screenshot.
+#### Rules Question
 
-Future Features
-Use this section to discuss plans for additional features to be implemented in the future:
+#### Play Game
 
-If you end up not developing some features you hoped to implement, you can include those in this section.
+#### Made user input easier by:
+- Case insensitivity can enter W and w etc. 
+- Leading/trailing space stripping.
+- Users don't have to type entire letters for Yes No validation, but keeping it simple.
 
-Design Documents
-This section is where you would share logic diagrams and spreadsheets that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in a separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+#### Recap Guessed letters and Guessed words
 
-The flowchart can be as simple as a picture of a drawing of how you envisioned laying out the logic for you project, or done with a professional tool such as powerpoint, googlesheets, or https://app.diagrams.net/ They are a roadmap and do not have to be 100% accurate of the final product.
+#### Dearh by Drowning stages represented with pixelated images
 
-Data Model/ Classes
-In this section write our your data model(s) or classes.
+#### PLay again
 
-You might want to include subsections that include how the data in the model is initialized and then the methods that you created to update it through the program.
+#### Goodbye message
 
-You can create a table and take a screenshot, or you can write up subsections in markdown:
+- Score tracker
+- Allows users to see how many games they have won vs the computer.
 
-image
+### Future Features 
+#### Google sheets to collect usernames and show 'Most Addicted Players'
+- This feature would collect usernames and compare them to a google doc, user's could then view what user has played the most. 
+- This feature would also show their wins and losses. 
+- Due to time restriction this could not be added to this version. 
 
-Class X
-To better group the game as an object, I wrote a class representing its properties and had method functions to update those properties:
+## Model / Class
+### Parameters 
+def __init__(self):
+        -self.word = random.choice(word_list)
+        -self.stage = 0
+        -self.guessed_letters = []
+        -self.guessed_words = []
+        # Solution for displaying the hidden word taken from this youttube
+        # With underscores replaced by dashes
+        -self.progress = '-' * len(self.word)
+        -self.games_played = 0
+        -self.games_won = 0
 
-Properties
+### Methods: 
+copy def functions with self and explanations docstring
 
-property 1: is a {string} it represents {something}
-property 2: is a {string} it represents {something}
-Methods
+## Testing
 
-__init__: Initialize method, it starts the class off with default parameters as if a user just started to play a game.
-__str__: Returns a string representation of the class/object
-Libraries used
-List out the python libraries you purposefully used in your project and why. You can look at your requirements.txt file and go back to https://pypi.org/ to rediscover the purpose of a library if needed.
+- if user entered the word it doesn't count twice
+- if user makes wrong choice it doesn't count 
 
-A bulleted list is a good presentation for this information.
+### Validator Testing 
+## PEP8 
 
-Testing
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your features and ensure that they all work as intended in an easy and straightforward way for the users to achieve their goals.
+- When I first put my code through PEP8, i got a few errors. 
+<img width="884" alt="image" src="https://user-images.githubusercontent.com/87448281/162600974-d9595529-38aa-4b21-b667-9a66455752c2.png">
 
-Validation Testing
-You should try to ensure you code is valid and follows proper indentation. In this section you should write up any websites you used to validate your code. As your projects becomes more complex these tools may change.
 
-CSS Validator Note, any error associated with root: color variables were ignored.
-HTML Validator
-JS validation for each .js file/ , if using ES6, add this before pasting in your file: /*jshint esversion: 6 */
-JSON validation for each .json file
-PEP8 Validator include a screenshot of results
-Note any errors or warnings you are ignoring and why. IT IS BEST NOT to have ERRORS, but NINJA, COLOR VARIABLES sometimes are ok to ignore if you say the IDE that has the correct linters noted no errors. Or you can take the rendered HTML and run it through the HTML validator for the Flask html templates.
+- I used ' # noqa' to overried the lines being too long to maintain the readability of the code. I also had to manually fix some whitespace errors. 
+<img width="944" alt="image" src="https://user-images.githubusercontent.com/87448281/162600949-79685ad8-711c-4560-bf0a-4ad3ea15874c.png">
 
-If the line is too long just add
+## Defects 
 
-# noqa
-There is a space before the # and after it to skip the quality assurance for that line.
+3-4
 
-Manual Testing
-You can track your test in various ways.
-
-But for any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant.
-
-Markdown
-A particularly useful form for describing your testing process is via scenarios, such as:
-
-Register Page Go to the Register page: http://.herokuapp.com/register
-
- Try to submit the empty form and verify that an error message about the required fields appears
- Try to submit the form with an invalid username format and verify that a relevant error message appears
- Try to submit the form with an invalid password format and verify that a relevant error message appears
- Try to submit the form with an existing username, should re-render page with relevant error message/warning
- Try to submit the form with all inputs valid and verify that a success message appears and user is on profile page
- Be logged in and go to register page url http://.herokuapp.com/register, should have error saying you are already registered and be on profile page
-Spreadsheet
-Here is a Manual Testing Template that you can use as a starting point to keep track of your testing efforts. Make a copy of it in your own account and update as needed to reflect the browsers you are testing and features.
-
-GitHub Issues, Milestones & Boards
-You can also use agile tools in github to help track your testing and defects. Here's a document that I put together about that process
-
-For more information you can visit: https://docs.github.com/en/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards
-
-It's ok to spot check specific functionality across devices and browsers but each page should be viewed as a whole for each device/browser combo at least once.
-
-Defect Tracking
-You can use git hub issues to track any bugs rather than a spread sheet and just link to that page for your repository.
-
-image
-
-You should created issues in real time and close them out as you fix the bugs. Include steps to recreate and screenshots.
-
-Create a link to the issues dashboard of your repository ci_insights isssues
-
-Defects of Note
-Some defects are more pesky than others. Highlight 3-5 of the bugs that drove you the most nuts and how you finally ended up resolving them.
-
-Outstanding Defects
-It's ok to not resolve all the defects you found. If you know of something that isn't quite right, list it out and explain why you chose not to resolve it.
-
-Commenting Code
-Make sure you use triple double quotes to document fuctions and classes. Here'a documentation worthy example:
-
-def yes_no(question):
-    """
-    Function to ask a simple yes no question of the user.
-    :param question: String displayed as the question
-    :return: answer: String equal to "1" or "2" representing yes or no respectfully
-    """
-    print(question)
-    print("yes = 1")
-    print("no = 2")
-    answer = input("enter your answer here \n").strip()
-    while answer not in ("1", "2"):
-        print("please choose 1 for yes and 2 for no")
-        answer = input("enter your answer here \n").strip()
-    return answer
-
-Deployment
-Requirements
-If the user is required to have certain keys and credentials you should include this section with diretions on how to get the necessary information. ex)
-
-Google Account: In order to have this program work, you need a google account. If you don't have one Create a google account
-
-Google APIs
-
-in a new incognito tab, log into your new google account.
-
-then update the url to be: https://console.cloud.google.com/getting-started?pli=1
-
-GOOGLE DRIVE API Access
-
-create a new project for this, call it XXXXXX (You might want to refer to what you see in this video: https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LS101+2021_T1/courseware/293ee9d8ff3542d3b877137ed81b9a5b/071036790a5642f9a6f004f9888b6a45/ at the bottom of the screen to write out steps.)
-Then click on Add APIs and Services and select Libraries
-Search for Google Drive
-Click Enable
-Click Create Credentials
-Select Google Drive API from the drop down, Application Data, then no and click the Next Button
-(https://developers.google.com/drive/api/v3/enable-drive-api)
-for service account details fill in a service account name ex) xxx_API, then click Create and Continue
-For the Accoun acces, select Role: Basic/Editor then continue
-Then Click Done
-Now select the newly created service account
-Click on the KEYS Tab
-Click Add Key
-Select JSON type (right click to show in folder so you know where the file was saved.
-GOOGLE SHEETS API Access You may need to us the back button get to the APIS & SErvices section from where you were.
-
-click the Libray Tab and serarch for Google Sheets
-click enable
-The downloaded credentialsJSON file is basically your creds.json file that you need to put into your heroku settings or gitpod environment to access your google drive.
-
-Google Sheet Template
-
-If you had to create specific sheets for your project, instruct users to make their own copy of it from yours and rename it back to what the python project expects
-And don't forget to share the spreadsheet in question with the client_email from the creds.json
-Gitpod
-This section should describe the process someone would have to go through to get the local working in gitpod. Such as install requirements.txt and setting up a creds.json file that is in the gitignore and keeping their workspace.
-
-If you have project settings required such as a creds.json file from the GOOGLE DRIVE API acess, please provide an example of that file in the writeup with the project key values:
-
-{
-    "type": "service_account",
-    "project_id": "<YOUR_VALUE>",
-    "private_key_id": "<YOUR_VALUE>",
-    "private_key": "<YOUR_VALUE>",
-    "client_email": "<YOUR_VALUE>",
-    "client_id": "<YOUR_VALUE>",
-    "auth_uri": "https://accoutns.google.com/0/oauth2/auth",
-    "token_uri": "https://oauth2.googleapis.com/token",
-    "auth_provider_x509_cer_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "clien_x509_cert_url": "<YOUR_VALUE>"
-}
-If you have any dependencies, you should instruct users to install them
-
-pip3 install -r requirements.txt
-Heroku
-This section should describe the process you went through to deploy the project to Heroku. Include screenshots if you think they would make the process easier.
-
-You may want to re-watch the python essentials deployment video when writing up this section.
-
-If you have project settings required for Heroku, provide a table of the keys and values. Do not share your personal keys but either cut them out of the screen shot or say <YOUR_VALUE> and include links on how the user would obtain such values.
-
-Fork the repository
-Make a fork so you have a copy of the repository in your own git hub account: https://github.com/maliahavlicek/portfolio_project_03
-
-image
-
-New Project
-Log into Heroku and create a new project. Name it something like XXX_coders_bistro.
-
-Settings
-On the settings tab you have to address two things:
-
-Config Vars
-image
-
-At a bar minimum you should show the user that they need to add the PORT. 8000 key value pair.
-
-Build Packs
-image
-
-add Python Then Node.js
-
-Deploy
-Set up to github and select the correct repository:
-image
-
-Deploy either manual or automatic
-image
-
-Credits
-To avoid plagiarism amd copyright infringement, you should mention any other projects, stackoverflow, videos, blogs, etc that you used to gather imagery or ideas for your code even if you used it as a starting point and modified things. Giving credit to other people's efforts and ideas that saved you time acknowledges the hard work others did.
-
--Code Institute Template - The Template for the GUI for this project was provided by Code Institute. This allows for the Command line to be shown and used within the browser.
-
-Content
-Use bullet points to list out sites you copied text from and cross-reference where those show up on your site
-
-Media
-Make a list of sites you used images from. If you used several sites try to match up each image to the correct site. This includes attribution for icons if they came from font awesome or other sites, give them credit.
-
-Acknowledgments
-This is the section where you refer to code examples, mentors, blogs, stack overflow answers and videos that helped you accomplish your end project. Even if it's an idea that you updated you should note the site and why it was important to your completed project.
-
-If you used a CodeInstitute Instructional project as a starting point. Make note of that here too.
+## Deployments 
+### Heroku 
+The site was deployed to Heroku. The steps to deploy are as follows: 
+  - First, you must log into Heroku and go into the settings tab. 
+  ![deployment-one](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/deployment-one.png)
+  - From here, you go to the Config Vars section. 
+  ![deployment-two](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/deployment-two.png)
+  - You then enter Key: PORT and Value: 8000. If you have a google sheet installed you will need to enter the data here too. 
+  ![deployment-three](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/deployment-three.png)
+  - You must then go to the buildpacks section. Here you add Python and Nodejs. The must be in the order of python on top, and Nodejs underneath. 
+  ![deployment-four](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/deployment-four.png)
+  - After finishing the above you will go to the 'Deploy' tab. 
+  ![deployment-five](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/deployment-five.png)
+  - You then connect to your Github account. 
+  ![deployment-six](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/deployment-six.png)
+  - Once you enter your repository name, your Github project will be connected to Heroku. 
+  ![deployment-seven](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/deployment-seven.png)
+  - From here you have two options to deploy. You can select the option to enable automatic deploys, so when you commit any changes will automatically deploy. 
+  ![deployment-eight](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/deployment-eight.png)
+  - The second option is to manually deploy, this is what I personally chose. When you click the 'Deploy' button, you will watch your files being uploaded. 
+  ![deployment-nine](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/deployment-nine.png)
+  -   Once this is complete, a sucess message will appear with a 'View' button that will bring you to the deployed project. 
+
+  ### Local/Gitpod
+  - Click Gitpod button or add it if you don't have it to chrome. 
+  - Once Gitpod is open, type ```pip3 install -r requirements.txt``` in the terminal. 
+  ![deployment-one-local](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/gitpod-one.png)
+  - Then type ```python3 run.py``` in the terminal. This will start the game. 
+  ![deployment-two-local](https://github.com/KateEllen/rock-paper-scissors/blob/main/assets/images/documentation/gitpod-two.png)
+
+The live link can be found here - https://thehangman2022.herokuapp.com/
+### Credits 
+
+#### Media
+- I made the flow chart using this. [Flow Chart](https://app.diagrams.net/)
+
+## Acknowledgments
+- My mentor Malia, as always, helped me throught this project. She helped me push this project above and beyond. 
+- My original code was inspired from this video. [Youtube Video](https://www.youtube.com/watch?v=-JACmC8kabo)
+- I learned how to use the class in python using this article. [Class atricle](https://www.scraggo.com/python-classes-guess-the-number/)
+- [Code Institute Template ](https://github.com/Code-Institute-Org/python-essentials-template)- The Template for the GUI for this project was provided by Code Institute. This allows for the Command line to be shown and used within the browser.
+- The colorama website helped to show me how to use it correctly [colorama](https://pypi.org/project/colorama/)
